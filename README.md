@@ -1,123 +1,241 @@
+# ScienceQtech Employee Performance Mapping
 
-📊 ScienceQtech Employee Performance Mapping
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
+[![MySQL](https://img.shields.io/badge/MySQL-Workbench-8.0-orange)](#tools-technologies)
 
-🧠 Project Overview
-This project focuses on analyzing employee data for ScienceQtech, a dynamic startup specializing in data science domains such as fraud detection, market basket analysis, self-driving cars, supply chain optimization, early lung cancer detection, customer sentiment analysis, and drug discovery.
+## Overview
 
-As part of the annual appraisal cycle, the HR department requires detailed reports on employee details, performance metrics, and project involvements. The objective is to extract specific data based on varying requirements to facilitate informed decision-making for performance mapping.
+**ScienceQtech Employee Performance Mapping** is a SQL-centric project that structures and analyzes employee data to support the HR department in annual performance appraisals. The focus is on transforming raw datasets into a relational database, extracting insights via SQL queries, and generating performance metrics to aid strategic HR decision-making. :contentReference[oaicite:1]{index=1}
 
-🎯 Objectives
-Structure and format the data within a MySQL database.
+---
 
-Generate an ER diagram for clear visualization of relationships.
+## Table of Contents
 
-Execute SQL queries to retrieve and analyze key employee data.
+- [Objectives](#objectives)
+- [Dataset](#dataset)
+- [Tools & Technologies](#tools-technologies)
+- [Methodology](#methodology)
+- [Key Findings](#key-findings)
+- [Repository Structure](#repository-structure)
 
-Calculate bonuses based on performance ratings and salaries.
 
-Ensure job profiles align with organizational standards.
+---
 
-Provide insights to assist the HR department in finalizing employee performance mapping.
+## Objectives
 
-🗂️ Dataset Description
-The project utilizes three primary datasets:
+The primary goals of this project are:
 
-emp_record_table.csv: Contains comprehensive employee information, including:
+- Structure and normalize employee data within a MySQL database.
+- Create an Entity-Relationship (ER) diagram to clarify table relationships.
+- Write SQL queries to retrieve and analyze employee performance data.
+- Calculate performance-based bonuses using ratings and salaries.
+- Validate job profiles relative to experience levels.
+- Generate actionable insights for HR performance mapping and appraisal processes. :contentReference[oaicite:2]{index=2}
 
-EMP_ID: Employee ID
+---
 
-FIRST_NAME: First name
+## Dataset
 
-LAST_NAME: Last name
+This project uses the following CSV datasets:
 
-GENDER: Gender
+### `emp_record_table.csv`
 
-ROLE: Job role
+Contains core employee information:
 
-DEPT: Department
+| Column       | Description                     |
+|--------------|---------------------------------|
+| EMP_ID       | Employee ID                    |
+| FIRST_NAME   | First Name                    |
+| LAST_NAME    | Last Name                     |
+| GENDER       | Gender                         |
+| ROLE         | Job Role                      |
+| DEPT         | Department                    |
+| EXP          | Years of Experience          |
+| COUNTRY      | Country of Residence         |
+| CONTINENT    | Continent of Residence       |
+| SALARY       | Salary                        |
+| EMP_RATING   | Performance Rating           |
+| MANAGER_ID   | Manager’s Employee ID        |
+| PROJ_ID      | Project ID Assigned          |
 
-EXP: Years of experience
+### `proj_table.csv`
 
-COUNTRY: Country of residence
+Details of projects:
 
-CONTINENT: Continent of residence
+| Column        | Description                  |
+|---------------|------------------------------|
+| PROJECT_ID   | Project ID                 |
+| PROJ_NAME    | Project Name              |
+| DOMAIN       | Project Domain             |
+| START_DATE   | Project Start Date         |
+| CLOSURE_DATE | Project End Date           |
+| DEV_QTR      | Development Quarter       |
+| STATUS       | Current Status            |
 
-SALARY: Salary
+### `data_science_team.csv`
 
-EMP_RATING: Performance rating
+Contains subset details of employees in the Data Science team:
 
-MANAGER_ID: Manager's employee ID
+| Column     | Description              |
+|------------|--------------------------|
+| EMP_ID     | Employee ID             |
+| FIRST_NAME | First Name             |
+| LAST_NAME  | Last Name              |
+| GENDER     | Gender                 |
+| ROLE       | Job Role              |
+| DEPT       | Department            |
+| EXP        | Experience (Years)   |
+| COUNTRY    | Country              |
+| CONTINENT  | Continent            | :contentReference[oaicite:3]{index=3}
 
-PROJ_ID: Project ID assigned
+---
 
-proj_table.csv: Details about projects, including:
+## Tools & Technologies
 
-PROJECT_ID: Project ID
+This project leverages the following:
 
-PROJ_Name: Project name
+- **MySQL Workbench 8.0** – Database design, ER diagram creation, and query execution.
+- **SQL** – Data manipulation and analysis through structured queries.
 
-DOMAIN: Project domain
+---
 
-START_DATE: Project start date
+## Methodology
 
-CLOSURE_DATE: Project end date
+### Database Setup
 
-DEV_QTR: Development quarter
+- Created a database named `employee`.
+- Imported CSV datasets into relational tables.
+- Defined table relationships and primary/foreign keys to ensure referential integrity. :contentReference[oaicite:4]{index=4}
 
-STATUS: Current status
+### Analysis & Querying
 
-data_science_team.csv: Information about employees in the Data Science team, including:
+- Executed SQL queries to extract detailed employee metrics.
+- Grouped employees by performance ratings, roles, and departments.
+- Calculated max/min salaries and performance-based bonuses.
+- Mapped job profiles according to predefined experience tiers using SQL functions and stored procedures. :contentReference[oaicite:5]{index=5}
 
-EMP_ID: Employee ID
+### Optimization
 
-FIRST_NAME: First name
+- Created views, stored procedures, and functions for reusable logic.
+- Implemented indexing to optimize query performance.
 
-LAST_NAME: Last name
+---
 
-GENDER: Gender
+## Key Findings
 
-ROLE: Job role
+- **Top Performers Identified:** Employees with the highest performance ratings were flagged for recognition.
+- **Bonus Calculations:** Quantified bonus allocations using salary and performance ratings.
+- **Role Validation:** Validated that job roles align with experience and organizational standards.
+- **HR Insights:** Prepared insights to assist HR in appraisal, promotion, and compensation decisions.
 
-DEPT: Department
+---
 
-EXP: Years of experience
 
-COUNTRY: Country of residence
+### Clone the Repository
 
-CONTINENT: Continent of residence
+```bash
+git clone https://github.com/yourusername/ScienceQtech-Employee-Performance-Mapping.git
+```
+## Set Up MySQL Database
 
-🛠️ Tools & Technologies
-MySQL Workbench 8.0: For database design and management.
+### 1. Install and Launch MySQL Workbench
 
-SQL: For querying and data manipulation.
-GitHub
+- Download and install **MySQL Workbench 8.0** if not already installed.
+- Open MySQL Workbench and connect to your MySQL server instance.
 
-🔍 Methodology
-Database Setup:
+### 2. Create the Database
 
-Created a database named employee.
+In the MySQL query editor, create a new database for this project:
 
-Imported the provided CSV files into corresponding tables.
+```sql
+CREATE DATABASE employee;
+USE employee;
+```
+### 3. Import CSV Files into MySQL
 
-Established relationships between tables to maintain data integrity.
+Use the **Table Data Import Wizard** in MySQL Workbench to load each CSV dataset into its respective table:
 
-Data Analysis:
+1. In the **Schemas** panel, right-click the `employee` database and select **Table Data Import Wizard**. :contentReference[oaicite:0]{index=0}  
+2. Browse and select each CSV file (`emp_record_table.csv`, `proj_table.csv`, and `data_science_team.csv`) one by one. :contentReference[oaicite:1]{index=1}  
+3. Follow the wizard steps to map CSV fields to table columns and configure appropriate data types. :contentReference[oaicite:2]{index=2}  
+4. Click **Finish** to complete the import. :contentReference[oaicite:3]{index=3}  
 
-Executed SQL queries to fetch employee details, categorize performance ratings, and identify top performers.
+**Tip:** Ensure the first row of each CSV contains header column names that match your intended table schema. :contentReference[oaicite:4]{index=4}
 
-Calculated maximum salaries across roles and designed bonus structures based on performance ratings.
+---
 
-Ensured job profiles aligned with organizational standards by mapping roles based on experience levels.
+### 4. Define Table Relationships
 
-Advanced SQL Implementations:
+Once the tables are imported:
 
-Utilized stored procedures, functions, views, and indexing to optimize data retrieval and analysis.
+- Establish primary keys such as `EMP_ID` and `PROJECT_ID` for each table.  
+- Add foreign key relationships (for example, link `emp_record_table.PROJ_ID` to `proj_table.PROJECT_ID`) to enforce referential integrity.
 
-📈 Key Findings
-Identified top-performing employees based on performance ratings.
+---
 
-Calculated bonuses to determine additional expenses.
+## Execute Analysis Queries
 
-Ensured all job roles met the organization's profile standards.
+Use the MySQL editor to run SQL queries that:
 
-Provided insights to assist the HR department in finalizing employee performance mapping.
+- Fetch employee performance data using `JOIN` operations across tables.  
+- Aggregate performance by roles, departments, and projects.  
+- Compute statistics such as highest salaries and top performers.  
+- Create views or stored procedures for reusable logic.
+
+Example SQL snippet:
+
+```sql
+SELECT e.EMP_ID,
+       CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS Employee,
+       e.ROLE,
+       e.DEPT,
+       e.SALARY,
+       e.EMP_RATING
+FROM emp_record_table e
+JOIN proj_table p ON e.PROJ_ID = p.PROJECT_ID;
+```
+
+## Bonus Calculation Logic
+
+To determine performance-based bonuses:
+
+1. Define rating thresholds and corresponding bonus percentages.
+2. Use SQL formulas or stored procedures to calculate bonus values based on salary and performance rating.
+
+Example:
+
+```sql
+UPDATE emp_record_table
+SET BONUS = CASE
+               WHEN EMP_RATING = 'A' THEN SALARY * 0.10
+               WHEN EMP_RATING = 'B' THEN SALARY * 0.07
+               WHEN EMP_RATING = 'C' THEN SALARY * 0.05
+               ELSE 0
+            END;
+```
+This ensures employees are rewarded proportionally to their performance and base compensation.
+
+### Optimize and Extend
+
+- To enhance database performance and usability:
+
+- Create indexes on frequently queried fields such as ROLE and DEPT.
+
+- Define views for aggregated insights (e.g., top performers).
+
+- Use stored procedures/functions to encapsulate complex logic and improve reusability. 
+
+
+### Insights & Reporting
+
+- With the data loaded and queries defined, generate reports such as:
+
+- Top-performing employees by rating and department.
+
+- Department salary distributions.
+
+- Project involvement summaries across performance tiers.
+
+These insights assist HR in appraisal decisions, compensation planning, and organizational alignment.
+
+
