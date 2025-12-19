@@ -2,7 +2,7 @@
 
 ## Overview
 
-**ScienceQtech Employee Performance Mapping** is a SQL-centric project that structures and analyzes employee data to support the HR department in annual performance appraisals. The focus is on transforming raw datasets into a relational database, extracting insights via SQL queries, and generating performance metrics to aid strategic HR decision-making. :contentReference[oaicite:1]{index=1}
+**ScienceQtech Employee Performance Mapping** is a SQL-centric project that structures and analyzes employee data to support the HR department in annual performance appraisals. The focus is on transforming raw datasets into a relational database, extracting insights via SQL queries, and generating performance metrics to aid strategic HR decision-making. 
 
 ---
 
@@ -27,7 +27,7 @@ The primary goals of this project are:
 - Write SQL queries to retrieve and analyze employee performance data.
 - Calculate performance-based bonuses using ratings and salaries.
 - Validate job profiles relative to experience levels.
-- Generate actionable insights for HR performance mapping and appraisal processes. :contentReference[oaicite:2]{index=2}
+- Generate actionable insights for HR performance mapping and appraisal processes. 
 
 ---
 
@@ -83,7 +83,7 @@ Contains subset details of employees in the Data Science team:
 | DEPT       | Department            |
 | EXP        | Experience (Years)   |
 | COUNTRY    | Country              |
-| CONTINENT  | Continent            | :contentReference[oaicite:3]{index=3}
+| CONTINENT  | Continent            | 
 
 ---
 
@@ -102,14 +102,14 @@ This project leverages the following:
 
 - Created a database named `employee`.
 - Imported CSV datasets into relational tables.
-- Defined table relationships and primary/foreign keys to ensure referential integrity. :contentReference[oaicite:4]{index=4}
+- Defined table relationships and primary/foreign keys to ensure referential integrity. 
 
 ### Analysis & Querying
 
 - Executed SQL queries to extract detailed employee metrics.
 - Grouped employees by performance ratings, roles, and departments.
 - Calculated max/min salaries and performance-based bonuses.
-- Mapped job profiles according to predefined experience tiers using SQL functions and stored procedures. :contentReference[oaicite:5]{index=5}
+- Mapped job profiles according to predefined experience tiers using SQL functions and stored procedures. 
 
 ### Optimization
 
@@ -152,12 +152,12 @@ USE employee;
 
 Use the **Table Data Import Wizard** in MySQL Workbench to load each CSV dataset into its respective table:
 
-1. In the **Schemas** panel, right-click the `employee` database and select **Table Data Import Wizard**. :contentReference[oaicite:0]{index=0}  
-2. Browse and select each CSV file (`emp_record_table.csv`, `proj_table.csv`, and `data_science_team.csv`) one by one. :contentReference[oaicite:1]{index=1}  
-3. Follow the wizard steps to map CSV fields to table columns and configure appropriate data types. :contentReference[oaicite:2]{index=2}  
-4. Click **Finish** to complete the import. :contentReference[oaicite:3]{index=3}  
+1. In the **Schemas** panel, right-click the `employee` database and select **Table Data Import Wizard**. 
+2. Browse and select each CSV file (`emp_record_table.csv`, `proj_table.csv`, and `data_science_team.csv`) one by one. 
+3. Follow the wizard steps to map CSV fields to table columns and configure appropriate data types.
+4. Click **Finish** to complete the import. 
 
-**Tip:** Ensure the first row of each CSV contains header column names that match your intended table schema. :contentReference[oaicite:4]{index=4}
+**Tip:** Ensure the first row of each CSV contains header column names that match your intended table schema. 
 
 ---
 
@@ -233,6 +233,6 @@ This ensures employees are rewarded proportionally to their performance and base
 
 - Project involvement summaries across performance tiers.
 
-These insights assist HR in appraisal decisions, compensation planning, and organizational alignment.
+## These insights assist HR in appraisal decisions, compensation planning, and organizational alignment.
 
 
