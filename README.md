@@ -1,8 +1,5 @@
 # ScienceQtech Employee Performance Mapping
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
-[![MySQL](https://img.shields.io/badge/MySQL-Workbench-8.0-orange)](#tools-technologies)
-
 ## Overview
 
 **ScienceQtech Employee Performance Mapping** is a SQL-centric project that structures and analyzes employee data to support the HR department in annual performance appraisals. The focus is on transforming raw datasets into a relational database, extracting insights via SQL queries, and generating performance metrics to aid strategic HR decision-making. :contentReference[oaicite:1]{index=1}
